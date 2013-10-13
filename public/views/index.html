@@ -1,3 +1,282 @@
-<section data-ng-controller="IndexController">
-	<h1>This is the home view</h1>
-</section>
+<div ng-include="'/views/includes/header.html'"></div>
+
+  <body ng-cloak ng-controller="OverviewCtrl">
+	<div id="registrationPage">
+		<img src="images/home_bg.jpg" class="homebg">
+		<div class="modal_bg"></div>
+		<div class="index_modal cusmodal">
+			<div class="modal_content">
+				<a href="#" class="logolink">
+					<div class="logo">
+						<img src="images/logo.png" class="logoimg" alt=""/>
+						<span>Program</span>
+					</div>
+				</a>
+				<form action="/users" method="post" class="signup form-horizontal">
+				<div class="desc">Please fill up this form to have access to training center</div>
+				<div class="email">
+					Email<br>
+					<input id="email" class="login" type="text" placeholder="email@company.name" required/>
+					<div class="alert alert-error" >  
+					  <span class="loginFont">Email must be vaild!</span> 
+					</div> 
+				</div>
+				<div class="password">
+					Password<br>
+					<input id="password" class="login" type="text"/>
+					<div class="alert alert-error">  
+					  <span class="loginFont">Password must be at least 6 characters!</span> 
+					</div> 
+				</div>
+				<div class="confirm">
+					Confirm Password<br>
+					<input id="confirm" class="login" type="text"/>
+					<div class="alert alert-error">  
+					  <span class="loginFont">Please rewrite your password correctly!</span> 
+					</div> 
+				</div>
+
+				<button type="button" id="register" class="btn btn-info">REGISTER</button>
+			</form>
+			</div>
+		</div>
+	  </div>
+	  <div id="overview">
+		<header>
+			<div class="container">
+				<div class="logo"><a href="#!">The 1-to-1 Program</a></div>
+				<ul class="navmenu">
+					<li class="overviewPage">
+						<a href="#!/overview">Overview</a>
+					</li>
+					<li class="trainingCenter">
+						<a href="#!/training">Training Center</a>
+					</li>
+				</ul>
+				<div class="signin">
+					<span>Welcome</span><br>
+					<a href="#">	
+						<span>Sign in</span>
+					</a>
+				</div>
+			</div>
+		  <div id="text">
+			<span id="bigText" class="coolText">Some Cool Text About Training Program</span><br> <br>
+			<span id="smallText" class="coolText">Some Cool Text About Training Program</span>
+		  </div>
+
+		</header>
+		<img src="images/overviewbg.png" class="overviewbg">
+		<div id="main">
+			<div id="timeline">
+				<span class="scriptMTBold"> Timeline </span>
+			</div>
+			<div class="container">
+				<div id="interactive1" class="span12">
+					<div class="span3">
+						<span class="top">Weeks 1&2 </span><br>
+						<span class="down">Determine Path & Steps</span>
+					</div>
+					<div class="span3">
+						<span class="top">Months 2-4 </span><br>
+						<span class="down">Motivated & Track Action Plan</span>
+					</div>
+					<div class="span5">
+						<span class="top">Months 6-12 </span><br>
+						<span class="down">Intermittent Follow Up</span>
+					</div>
+				</div>
+				<div id="interactive2" class="span12">
+					<!--<img src="images/underline.png" class="underline">-->
+					<div class="span1 blue1">
+						<a href="#" class="example" rel="popover" data-content="Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, changing only the labels. In addition some manufactures create low-cost generic brand labels with only the name of the product. Addition some manufactures create low-cost generic brand labels with only the name of the product." data-placement="bottom"><img class="blue" src="images/blueDot.png"></a>
+						<img class="red" src="images/redDot.png"><hr>
+					</div>
+					<div class="span2 blue2">
+						<a href="#" class="example" rel="popover" data-content="Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, changing only the labels. In addition some manufactures create low-cost generic brand labels with only the name of the product. Addition some manufactures create low-cost generic brand labels with only the name of the product." data-placement="bottom"><img class="blue" src="images/blueDot.png"></a>
+						<img class="red" src="images/redDot.png"><hr>
+					</div>
+					<div class="span2 blue3">
+						<a href="#" class="example" rel="popover" data-content="Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, changing only the labels. In addition some manufactures create low-cost generic brand labels with only the name of the product. Addition some manufactures create low-cost generic brand labels with only the name of the product." data-placement="bottom"><img class="blue" src="images/blueDot.png"></a>
+						<img class="red" src="images/redDot.png"><hr>
+					</div>
+					<div class="span3 blue4">
+						<a href="#" class="example" rel="popover" data-content="Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, changing only the labels. In addition some manufactures create low-cost generic brand labels with only the name of the product. Addition some manufactures create low-cost generic brand labels with only the name of the product." data-placement="bottom"><img class="blue" src="images/blueDot.png"></a>
+						<img class="red" src="images/redDot.png"><hr>
+					</div>
+					<div class="span2 blue5">
+						<a href="#" class="example" rel="popover" data-content="Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, changing only the labels. In addition some manufactures create low-cost generic brand labels with only the name of the product. Addition some manufactures create low-cost generic brand labels with only the name of the product." data-placement="bottom"><img class="blue" src="images/blueDot.png"></a>
+						<img class="red" src="images/redDot.png"><hr>
+					</div>
+
+				</div>
+				<div id="interactive3" class="span12">
+					<div class="span6">
+						<span class="top">Weeks 3&4 </span><br>
+						<span class="down">Define Recovery Action Plan</span>
+					</div>
+					<div class="span5">
+						<span class="top">Months 4-6 </span><br>
+						<span class="down">Motivate & Make Plan Stick</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="footer1">
+				<div id="title">
+					<span class="scriptMTBold whiteBold"> How The Program Works </span>
+				</div>
+				<div id="description">
+					<span class="whiteBold description">Most supermarket private brand or store brand products are provided by companies that sell to multiple supermarkets, <br> changing only the labels. In addition some manufacturers create low-cost generic brand labels with only the name of the product.</span>
+				</div>
+				<div id="rollImages">
+					<img src="images/1.png" class="rollImages rolloverImage1">
+					<img src="images/2.png" class="rollImages">
+					<img src="images/3.png" class="rollImages rolloverImage2">
+					<img src="images/4.png" class="rollImages">
+					<img src="images/5.png" class="rollImages rolloverImage3">
+					<img src="images/6.png" class="rollImages">
+					<img src="images/7.png" class="rollImages rolloverImage4">
+				</div>
+				<div id="bottom">
+					<div class="bottom">
+						<span class="whiteBold description">
+							Most supermarket private brand or<br> store brand products are provided<br> by companies that sell to multiple<br> supermarkets.
+						</span>
+					</div>
+					<div class="bottom">
+						<span class="whiteBold description">
+							Most supermarket private brand or<br> store brand products are provided<br> by companies that sell to multiple<br> supermarkets.
+						</span>
+					</div>
+					<div class="bottom">
+						<span class="whiteBold description">
+							Most supermarket private brand or<br> store brand products are provided<br> by companies that sell to multiple<br> supermarkets.
+						</span>
+					</div>
+					<div class="bottom">
+						<span class="whiteBold description">
+							Most supermarket private brand or<br> store brand products are provided<br> by companies that sell to multiple<br> supermarkets.
+						</span>
+					</div>
+
+				</div>
+			</div>
+			<div id="footer2">
+				<div id="footerBottom1">
+					<span class="footerBottom"> 1to1mentor.org </span>
+				</div>
+				<div id="footerBottom2">
+					<span class="footerBottom"> hello@website.com </span>
+				</div>
+				<div id="footerBottom3">
+					<span class="footerBottom"> 2013 1to1mentor. All Rights Reserved </span>
+				</div>
+			</div>
+		</div>
+	  </div><!--end of overview page-->
+
+	  <div id="trainingPage">
+		<header style="top: 0;">
+			<div class="container">
+				<div class="logo"><a href="#">The 1-to-1 Program</a></div>
+				<ul class="navmenu">
+					<li class="overviewPage">
+						<a href="#">Overview</a>
+					</li>
+					<li class="trainingCenter">
+						<a href="#">Training Center</a>
+					</li>
+				</ul>
+				<div class="signin">
+					<span>Welcome</span><br>
+					<a href="#">	
+						<span>Sign in</span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<div id="trainingCenter">
+			<div id="trainingCenter">
+				<span class="scriptMTBold"> Training Modules </span>
+			</div>
+			<div id="behavior">
+				<div class="behaviorText">
+					<div class="introduction"> Behavior Change Introduction </div>
+					<div class="viewAll"> View all </div>
+				</div>
+				<div class="behaviorImage">
+				  <ul>
+					<li class="bePhoto" ng-repeat="comment in comments">
+						<img src="{{comment.photo}}" class="beImage" ng-click="gotoFlash(comment)" href="{{comment.flash}}" id="{{comment.progress}}">
+					</li>
+				  </ul>
+				 </div>
+				<div class="behaviorProgress">
+					<span class="viewAll">Course Progress</span>
+				</div>
+				<div class="behaviorText">
+					<div class="startProgress"> 0% </div>
+					<div class="middleProgress">  </div>
+					<div class="endProgress"> 100% </div>
+				</div>
+				<div id="progressbar">
+					<div class="part1">
+					</div>
+					<!--<img class="bar" src="images/redDot.png">-->
+					<div class="part2">
+					</div>
+				</div>
+				<img class="bar" src="images/redDot.png">
+			</div>
+			<div id="motivation">
+				<div class="behaviorText">
+					<div class="introduction"> Motivational Interviewing Introduction </div>
+					<div class="viewAll"> View all </div>
+				</div>
+				<div class="behaviorImage">
+				  <ul>
+					<li class="bePhoto" ng-repeat="comment in comments">
+						<img src="{{comment.photo}}" class="beImage1" ng-click="gotoFlash(comment)" href="{{comment.flash}}" id="{{comment.progress}}">
+					</li>
+				  </ul>
+				 </div>
+				<div class="behaviorProgress">
+					<span class="viewAll">Course Progress</span>
+				</div>
+				<div class="behaviorText">
+					<div class="startProgress"> 0% </div>
+					<div class="middleProgress1">  </div>
+					<div class="endProgress"> 100% </div>
+				</div>
+				<div id="progressbar1">
+					<div class="part11">
+					</div>
+					<!--<img class="bar" src="images/redDot.png">-->
+					<div class="part12">
+					</div>
+				</div>
+				<img class="bar1" src="images/redDot.png">
+			</div>
+			<div id="footer2">
+				<div id="footerBottom1">
+					<span class="footerBottom"> 1to1mentor.org </span>
+				</div>
+				<div id="footerBottom2">
+					<span class="footerBottom"> hello@website.com </span>
+				</div>
+				<div id="footerBottom3">
+					<span class="footerBottom"> 2013 1to1mentor. All Rights Reserved </span>
+				</div>
+			</div>
+
+		</div>
+		<!--<div id="dialog" title="Basic dialog">
+			<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>-->
+	  </div>
+	</body>
+</html>

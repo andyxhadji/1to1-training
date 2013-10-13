@@ -1,0 +1,17 @@
+			<div class="container">
+				<div class="logo"><a href="#">The 1-to-1 Program</a></div>
+				<ul class="navmenu">
+					<li class="overviewPage">
+						<a data-ng-href="/overview">Overview</a>
+					</li>
+					<li class="trainingCenter">
+						<a data-ng-href="/training">Training Center</a>
+					</li>
+				</ul>
+				<div class="signin" ng-controller="TrainingController" ng-init="modules()">
+					<span>Welcome</span><br>
+					<a href="#">	
+						<span>{{user.name || "Sign in"}}</span>
+					</a>
+				</div>
+			</div>

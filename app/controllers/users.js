@@ -11,6 +11,14 @@ exports.authCallback = function(req, res, next) {
     res.redirect('/');
 };
 
+/*
+* /training goes to signin if no user object
+*/
+
+exports.training = function(req, res) {
+    res.redirect('#/training');
+};
+
 /**
  * Show login form
  */
@@ -43,7 +51,7 @@ exports.signout = function(req, res) {
  * Session
  */
 exports.session = function(req, res) {
-    res.redirect('/');
+    res.redirect('#/overview');
 };
 
 /**
@@ -62,7 +70,7 @@ exports.create = function(req, res) {
         }
         req.logIn(user, function(err) {
             if (err) return next(err);
-            return res.redirect('/');
+            return res.redirect('#/overview');
         });
     });
 };
@@ -87,7 +95,7 @@ exports.me = function(req, res) {
 };
 
 /**
- * Find user by id
+ * null user by id
  */
 exports.user = function(req, res, next, id) {
     User

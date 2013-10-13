@@ -1,0 +1,85 @@
+<div ng-include="'/views/includes/header.html'"></div>
+<body ng-controller="TrainingController" ng-init="modules()">
+
+<header style="top: 0;">
+<div ng-include="'/views/includes/navbar.html'"></div>
+
+</header>
+
+<div> 
+		<div ng-controller="TrainingController" ng-init="modules()">
+			<div id="trainingCenter">
+				<span class="scriptMTBold"> Training Modules </span>
+			</div>
+
+			<div class="viewAll" ng-show="maxModules != modules.length" ng-click="maxModules=modules.length"> View all </div>
+
+        <div ng-repeat="module in modules | limitTo:maxModules">
+
+        	<a class="track-link track-progress module cell" href="#">
+
+        	    <div class="progress-circle" ng-include="'/views/includes/progress.html'">
+        	    </div>
+        	    <div class="behaviorText">
+        	      <div class="introduction">{{ module.title }}</div>
+        	    </div>
+        	    <a ng-show="module.percentage!=1"class="btn module-btn" href="#">Continue ({{module.percentage*100}}%)</a>
+        	    <a ng-show="module.percentage==1"class="btn module-btn" >Completed!</a>
+
+        	</a>
+
+		</div>
+
+
+
+ <!-- 			<div id="motivation">
+				<div class="behaviorText">
+					<div class="introduction"> Motivational Interviewing Introduction </div>
+					<div class="viewAll"> View all </div>
+				</div>
+				<div class="behaviorImage">
+				  <ul>
+					<li class="bePhoto" ng-repeat="comment in comments">
+						<img src="{{comment.photo}}" class="beImage1" ng-click="gotoFlash(comment)" href="{{comment.flash}}" id="{{comment.progress}}">
+					</li>
+				  </ul>
+				 </div>
+				<div class="behaviorProgress">
+					<span class="viewAll">Course Progress</span>
+				</div>
+				<div class="behaviorText">
+					<div class="startProgress"> 0% </div>
+					<div class="middleProgress1">  </div>
+					<div class="endProgress"> 100% </div>
+				</div>
+				<div id="progressbar1">
+					<div class="part11">
+					</div>
+					<!--<img class="bar" src="images/redDot.png">
+					<div class="part12">
+					</div>
+				</div>
+				<img class="bar1" src="images/redDot.png">
+			</div> --> 
+
+
+			<div id="footer2">
+				<div id="footerBottom1">
+					<span class="footerBottom"> 1to1mentor.org </span>
+				</div>
+				<div id="footerBottom2">
+					<span class="footerBottom"> hello@website.com </span>
+				</div>
+				<div id="footerBottom3">
+					<span class="footerBottom"> 2013 1to1mentor. All Rights Reserved </span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+		<!--<div id="dialog" title="Basic dialog">
+			<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>-->
+	  </div>
+	</body>
+	  </html>

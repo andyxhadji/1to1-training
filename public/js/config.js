@@ -17,6 +17,12 @@ window.app.config(['$routeProvider',
         when('/', {
             templateUrl: 'views/index.html'
         }).
+        when('/overview', {
+            templateUrl: 'views/overview.html'
+        }).
+        when('/training', {
+            templateUrl: 'views/training.html'
+        }).
         otherwise({
             redirectTo: '/'
         });
@@ -26,6 +32,6 @@ window.app.config(['$routeProvider',
 //Setting HTML5 Location Mode
 window.app.config(['$locationProvider',
     function($locationProvider) {
-        $locationProvider.hashPrefix("!");
+        $locationProvider.html5Mode(true);
     }
 ]);
